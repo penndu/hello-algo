@@ -1,6 +1,6 @@
 # Double-ended queue
 
-In a queue, we can only delete elements from the head or add elements to the tail. As shown in the following diagram, a "double-ended queue (deque)" offers more flexibility, allowing the addition or removal of elements at both the head and the tail.
+In a queue, we can only delete elements from the head or add elements to the tail. As shown in the figure below, a <u>double-ended queue (deque)</u> offers more flexibility, allowing the addition or removal of elements at both the head and the tail.
 
 ![Operations in double-ended queue](deque.assets/deque_operations.png)
 
@@ -10,14 +10,14 @@ The common operations in a double-ended queue are listed below, and the names of
 
 <p align="center"> Table <id> &nbsp; Efficiency of double-ended queue operations </p>
 
-| Method Name   | Description                 | Time Complexity |
-| ------------- | --------------------------- | --------------- |
+| Method Name   | Description                | Time Complexity |
+| ------------- | -------------------------- | --------------- |
 | `pushFirst()` | Add an element to the head | $O(1)$          |
-| `pushLast()`  | Add an element to the tail  | $O(1)$          |
-| `popFirst()`  | Remove the first element    | $O(1)$          |
-| `popLast()`   | Remove the last element     | $O(1)$          |
-| `peekFirst()` | Access the first element    | $O(1)$          |
-| `peekLast()`  | Access the last element     | $O(1)$          |
+| `pushLast()`  | Add an element to the tail | $O(1)$          |
+| `popFirst()`  | Remove the first element   | $O(1)$          |
+| `popLast()`   | Remove the last element    | $O(1)$          |
+| `peekFirst()` | Access the first element   | $O(1)$          |
+| `peekLast()`  | Access the last element    | $O(1)$          |
 
 Similarly, we can directly use the double-ended queue classes implemented in programming languages:
 
@@ -27,28 +27,28 @@ Similarly, we can directly use the double-ended queue classes implemented in pro
     from collections import deque
 
     # Initialize the deque
-    deque: deque[int] = deque()
+    deq: deque[int] = deque()
 
     # Enqueue elements
-    deque.append(2)      # Add to the tail
-    deque.append(5)
-    deque.append(4)
-    deque.appendleft(3)  # Add to the head
-    deque.appendleft(1)
+    deq.append(2)      # Add to the tail
+    deq.append(5)
+    deq.append(4)
+    deq.appendleft(3)  # Add to the head
+    deq.appendleft(1)
 
     # Access elements
-    front: int = deque[0]  # The first element
-    rear: int = deque[-1]  # The last element
+    front: int = deq[0]  # The first element
+    rear: int = deq[-1]  # The last element
 
     # Dequeue elements
-    pop_front: int = deque.popleft()  # The first element dequeued
-    pop_rear: int = deque.pop()       # The last element dequeued
+    pop_front: int = deq.popleft()  # The first element dequeued
+    pop_rear: int = deq.pop()       # The last element dequeued
 
     # Get the length of the deque
-    size: int = len(deque)
+    size: int = len(deq)
 
     # Check if the deque is empty
-    is_empty: bool = len(deque) == 0
+    is_empty: bool = len(deq) == 0
     ```
 
 === "C++"
